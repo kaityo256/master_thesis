@@ -4,47 +4,13 @@
 \usepackage{listings}
 \usepackage{cite}
 \usepackage{url}
+\usepackage{master_thesis}
 
 % ソースコードを挿入するための設定
 \lstset{
  	language = Python,
      frame = tbrl
 }
-
-\makeatletter
-
-\newcommand{\@academicyear}{2020}
-\newcommand{\academicyear}[1]{\renewcommand{\@academicyear}{#1}}
-\newcommand{\@submitdate}{2021年3月}
-\newcommand{\submitdate}[1]{\renewcommand{\@submitdate}{#1}}
-
-\newcommand{\@advisor}{指導刷男}
-\newcommand{\advisor}[1]{\renewcommand{\@advisor}{#1}}
-
-\newcommand{\@advisortitle}{准教授}
-\newcommand{\advisortitle}[1]{\renewcommand{\@advisortitle}{#1}}
-
-\newcommand{\@studentnumber}{XXXXXXXX}
-\newcommand{\studentnumber}[1]{\renewcommand{\@studentnumber}{#1}}
-\renewcommand{\maketitle}{%
-\newpage
-\pagestyle{empty}
-\Large
-修士論文
-\hfill
-{\@academicyear}年度\\[3cm]
-\begin{center}
-{\Huge \@title}\\[5cm]
-{\Huge \@author}\\[3mm]
-(学籍番号: \@studentnumber)\\[3cm]
-指導教員~~\@advisortitle~~\@advisor\\[1cm]
-{\@submitdate}\\[1cm]
-慶應義塾大学大学院理工学研究科基礎理工学専攻
-\end{center}
-}
-
-\makeatother
-
 
 % 修論タイトル
 \title{修士論文執筆におけるLaTeXテンプレート利用の効率についての研究}
@@ -74,6 +40,7 @@
 \tableofcontents
 \pagestyle{plain}
 \setcounter{page}{1}
+
 \chapter{はじめに} \label{chap:introduction}
 \pagenumbering{arabic}
 
