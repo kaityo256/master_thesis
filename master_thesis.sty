@@ -10,21 +10,43 @@
 \newcommand{\@advisortitle}{准教授}
 \newcommand{\advisortitle}[1]{\renewcommand{\@advisortitle}{#1}}
 
+\newcommand{\@japaneseabstract}{}
+\newcommand{\japaneseabstract}[1]{\renewcommand{\@japaneseabstract}{#1}}
+
+\newcommand{\@englishabstract}{}
+\newcommand{\englishabstract}[1]{\renewcommand{\@englishabstract}{#1}}
+
 \newcommand{\@studentnumber}{XXXXXXXX}
 \newcommand{\studentnumber}[1]{\renewcommand{\@studentnumber}{#1}}
+
+\newcommand{\@englishtitle}{}
+\newcommand{\englishtitle}[1]{\renewcommand{\@englishtitle}{#1}}
+
 \renewcommand{\maketitle}{%
 \newpage
 \pagestyle{empty}
-\Large
-修士論文
+{\Large 修士論文}
 \hfill
-{\@academicyear}年度\\[3cm]
+{\Large {\@academicyear}年度}\\[3cm]
 \begin{center}
 {\Huge \@title}\\[5cm]
 {\Huge \@author}\\[3mm]
-(学籍番号: \@studentnumber)\\[3cm]
-指導教員~~\@advisortitle~~\@advisor\\[1cm]
+{\Large (学籍番号: \@studentnumber)}\\[3cm]
+{\Large 指導教員~~\@advisortitle~~\@advisor}\\[1cm]
 {\@submitdate}\\[1cm]
-慶應義塾大学大学院理工学研究科基礎理工学専攻
+{\Large 慶應義塾大学大学院理工学研究科基礎理工学専攻}
 \end{center}
+
+\newpage
+\begin{center}
+{\huge 論文要旨}
+\end{center}
+\@japaneseabstract
+
+\newpage
+\begin{center}
+{\huge Thesis Abstract}\\[1cm]
+{\Large \@englishtitle}
+\end{center}
+\@englishabstract
 }
