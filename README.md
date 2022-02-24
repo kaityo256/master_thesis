@@ -29,6 +29,22 @@ $pdf_mode = 3;
 $dvipdf = 'dvipdfmx %O -o %D %S'
 ```
 
+## 提出要旨の作成
+
+pdftkがインストールされていれば、`thesis.pdf`から提出用の要旨(表紙＋和文要旨＋英文要旨を一つのPDFにしたもの)を作成できる。
+
+```sh
+pdftk thesis.pdf cat 1-3 output submit_abstract.pdf
+```
+
+単に
+
+```sh
+make abst
+```
+
+とすれば、`thesis.pdf`が無ければ作成され、そこから`submit_abstract.pdf`が作成される。
+
 ## ライセンス
 
 CC-BY

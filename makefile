@@ -6,6 +6,9 @@ all: $(TARGET).pdf
 %.pdf: %.tex
 	latexmk $<
 
+abst: $(TARGET).pdf
+	pdftk thesis.pdf cat 1-3 output submit_abstract.pdf
+
 .PHONY: clean
 clean:
 	rm -f $(TARGET).aux
