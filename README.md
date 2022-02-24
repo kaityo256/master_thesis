@@ -13,11 +13,11 @@
 
 ## 使い方
 
-Forkやcloneをせず、「ダウンロード」して使うこと。その上でGitHub等でプライベートリポジトリとして管理することを強く推奨する。
+Forkやcloneをせず、「ダウンロード」して使うこと。リポジトリの「Code」ボタンの「Download ZIP」をクリックすることでZipファイルがダウンロードできる。その上でローカルでGit管理し、さらにGitHub等でプライベートリポジトリとして管理することを強く推奨する。
 
 ## コンパイル方法
 
-TeXLiveをインストールし、LaTeXでコンパイルすればよいが、latexmkによるコンパイルを推奨する。.latexmkrcは、例えば以下のようにすれば良い。
+TeXLiveをインストールし、LaTeXでコンパイルすればよいが、latexmkによるコンパイルを推奨する。`.latexmkrc`は、例えば以下のようにすれば良い。
 
 ```sh
 #!/usr/bin/env perl
@@ -28,6 +28,14 @@ $makeindex = 'memindex %O -o %D %S';
 $pdf_mode = 3;
 $dvipdf = 'dvipdfmx %O -o %D %S'
 ```
+
+正しくインストールされていれば、
+
+```sh
+latexmk
+```
+
+を実行することで`thesis.pdf`が作成される。
 
 ## 提出要旨の作成
 
