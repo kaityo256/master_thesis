@@ -141,21 +141,19 @@ GitHubのサイトなど、やむを得ずURLを引用する場合には、bibit
 図は、数が多くなければとりえあずfigといったディレクトリにまとめて入れておくと良いだろう。数が増えてきて管理が難しくなったら節ごとにわけるなど工夫すること。画像ファイルは原則としてPDFにすること。例えば\verb|temperature.pdf|を入れたいなら、
 
 \begin{lstlisting}[language={[LaTeX]TeX}]
-    \begin{figure}[htbp]
-        \begin{center}
-            \includegraphics[width=10cm]{fig/temperature.pdf}
-        \end{center}
-        \caption{温度の時間発展。}
-        \label{fig:temperature}
-    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=10cm]{fig/temperature.pdf}
+    \caption{温度の時間発展。}
+    \label{fig:temperature}
+\end{figure}
 \end{lstlisting}
 
 とすると、以下のような図が得られる。
 
 \begin{figure}[htbp]
-    \begin{center}
-        \includegraphics[width=10cm]{fig/temperature.pdf}
-    \end{center}
+    \centering
+    \includegraphics[width=10cm]{fig/temperature.pdf}
     \caption{温度の時間発展。}
     \label{fig:temperature}
 \end{figure}
