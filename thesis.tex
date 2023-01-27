@@ -7,11 +7,28 @@
 \usepackage{master_thesis}
 
 % ソースコードを挿入するための設定
+\usepackage[dvipdfmx]{color}
+\definecolor{OliveGreen}{rgb}{0.0,0.6,0.0}
+\definecolor{Magenta}{cmyk}{0, 1, 0, 0}
+\definecolor{colFunc}{rgb}{1,0.07,0.54}
+\definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
+\definecolor{Brown}{cmyk}{0,0.81,1,0.60}
+\definecolor{colID}{rgb}{0.63,0.44,0}
 \lstset{
- 	language = Python,
-     frame = tbrl
+language={Python},
+basicstyle={\ttfamily\small},
+backgroundcolor={\color[gray]{.95}},
+keywordstyle={\color{blue}},
+commentstyle={\color{OliveGreen}}
+stringstyle=\color{Magenta},
+frame=single,
+numbers=left,
+numberstyle={\ttfamily\small},
+breaklines=true,
+breakindent = 10pt,
+tabsize=2,
+captionpos=t
 }
-
 % 修論タイトル(和文)
 \title{修士論文執筆におけるLaTeXテンプレート利用の効率についての研究}
 
@@ -56,6 +73,7 @@ Elephant eggs are so delicious. Elephant eggs are so delicious. Elephant eggs ar
 \maketitle
 \pagenumbering{roman}
 
+\setcounter{tocdepth}{2}
 \tableofcontents
 \pagestyle{plain}
 \setcounter{page}{1}
