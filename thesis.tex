@@ -65,12 +65,14 @@ Elephant eggs are so delicious. Elephant eggs are so delicious. Elephant eggs ar
 
 \begin{document}
 \maketitle
+\clearpage
+\pagestyle{plain}
 \pagenumbering{roman}
-
 \setcounter{tocdepth}{2}
+
 \tableofcontents
 \pagestyle{plain}
-\setcounter{page}{1}
+%\setcounter{page}{1}
 
 \chapter{はじめに} \label{chap:introduction}
 \pagenumbering{arabic}
@@ -90,7 +92,7 @@ Elephant eggs are so delicious. Elephant eggs are so delicious. Elephant eggs ar
 論文の構成を説明する。まず本研究の目的を一行で書いてから、各章に何が書いてあるかを説明する。以下は例である。
 
 \begin{quotation}
-    本研究では、では、分野Aにおける手法Xの精度改善を行う。以下に本論文の構成を示す。第\ref{chap:introduction}章では、分野Aにおける手法の概観を紹介し、手法Xが広く用いられていることを示した。第\ref{chap:method}章では、本研究で用いる手法X、及びその改善手法であるX'について説明する。第\ref{chap:results}章では、本研究で提案した手法X'と、もととなった手法Xとの精度の比較を行う。第\ref{chap:summary}章では本研究で得られた知見を総括し、結論と今後の展望について述べる。
+	本研究では、では、分野Aにおける手法Xの精度改善を行う。以下に本論文の構成を示す。第\ref{chap:introduction}章では、分野Aにおける手法の概観を紹介し、手法Xが広く用いられていることを示した。第\ref{chap:method}章では、本研究で用いる手法X、及びその改善手法であるX'について説明する。第\ref{chap:results}章では、本研究で提案した手法X'と、もととなった手法Xとの精度の比較を行う。第\ref{chap:summary}章では本研究で得られた知見を総括し、結論と今後の展望について述べる。
 \end{quotation}
 
 \chapter{手法} \label{chap:method}
@@ -124,7 +126,7 @@ BibTeXでは、参考文献を「エントリ」と呼ばれる構造で管理�
 
 これは以下のようにタイプセットされる。
 \begin{quotation}
-    本論文の執筆にあたり、LaTeXの書き方については奥村・黒木の書籍を参考にした\cite{okumura2020}。
+	本論文の執筆にあたり、LaTeXの書き方については奥村・黒木の書籍を参考にした\cite{okumura2020}。
 \end{quotation}
 
 \subsection{URLの引用}
@@ -145,7 +147,7 @@ GitHubのサイトなど、やむを得ずURLを引用する場合には、bibit
 として引用すると、
 
 \begin{quotation}
-    この論文の参照実装はGitHubにて利用可能である\cite{github}。
+	この論文の参照実装はGitHubにて利用可能である\cite{github}。
 \end{quotation}
 となる。
 
@@ -167,10 +169,10 @@ GitHubのサイトなど、やむを得ずURLを引用する場合には、bibit
 とすると、以下のような図が得られる。
 
 \begin{figure}[htbp]
-    \centering
-    \includegraphics[width=10cm]{fig/temperature.pdf}
-    \caption{温度の時間発展。}
-    \label{fig:temperature}
+	\centering
+	\includegraphics[width=10cm]{fig/temperature.pdf}
+	\caption{温度の時間発展。}
+	\label{fig:temperature}
 \end{figure}
 
 この時、元データと、データからPDFを作るためのプロットファイルもしくはスクリプトファイルを一緒に入れておく。この時、画像ファイルとプロットファイルの名前を同じにしておくと良い。例えばgnuplotを使って\verb|temperature.pdf|という画像を作るなら、プロットファイルを\verb|temperature.plt|にしておく。すると、
