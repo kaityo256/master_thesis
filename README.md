@@ -13,7 +13,20 @@
 
 ## 使い方
 
-Forkやcloneをせず、「ダウンロード」して使うこと。リポジトリの「Code」ボタンの「Download ZIP」をクリックすることでZipファイルがダウンロードできる。その上でローカルでGit管理し、さらにGitHub等でプライベートリポジトリとして管理することを強く推奨する。
+HTTPSでクローンして、リポジトリを初期化し、新たにリポジトリを作る。
+
+```sh
+cd
+cd github
+git clone https://github.com/kaityo256/master_thesis.git
+cd master_thesis
+rm -rf .git
+git init
+git add .
+git commit -m ":tada: initial commit"
+```
+
+さらにGitHub等でプライベートリポジトリとして管理することを強く推奨する。
 
 ## コンパイル方法
 
@@ -22,10 +35,11 @@ TeXLiveをインストールし、LaTeXでコンパイルすればよいが、la
 ```sh
 #!/usr/bin/env perl
 
-$latex = 'platex -synctex=1 -interaction=nonstopmode %O %S';
+$latex = 'platex -synctex=1 %O %S';
 $bibtex = 'pbibtex %O %B';
+$makeindex = 'memindex %O -o %D %S';
 $pdf_mode = 3;
-$dvipdf = 'dvipdfmx %O -o %D %S'
+$dvipdf = 'dvipdfmx -V 7 %O -o %D %S';
 ```
 
 正しくインストールされていれば、
